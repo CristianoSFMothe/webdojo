@@ -9,3 +9,9 @@ Cypress.Commands.add("submitLoginForm", (email, password) => {
 
   cy.contains("button", "Entrar").click();
 });
+
+Cypress.Commands.add("goTo", (buttonName, pageTile) => {
+  cy.contains("button", buttonName).should("be.visible").click();
+
+  cy.contains("h1", pageTile).should("be.visible");
+});
