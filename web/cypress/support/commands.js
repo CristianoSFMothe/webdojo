@@ -1,3 +1,5 @@
+import "cypress-real-events";
+
 Cypress.Commands.add("startPage", () => {
   cy.viewport(1920, 1080);
   cy.visit("http://localhost:3000");
