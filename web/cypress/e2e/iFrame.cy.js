@@ -1,4 +1,4 @@
-describe("Tocar vídeo", () => {
+describe("iFrame", () => {
   it("Deve pode tocar o vídeo de exemplo", () => {
     cy.startPage();
     cy.submitLoginForm("papito@webdojo.com", "katana123");
