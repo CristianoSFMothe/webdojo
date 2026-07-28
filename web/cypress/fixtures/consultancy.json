@@ -1,0 +1,45 @@
+{
+  "personal": {
+    "name": "Cristiano Mothe",
+    "email": "cristiano@teste.com.br",
+    "phone": "11 99999-9999",
+    "consultancyType": "Individual",
+    "personType": "cpf",
+    "document": "55363750082",
+    "discoveryChannels": [
+      "Instagram",
+      "LinkedIn",
+      "Udemy",
+      "YouTube",
+      "Indicação de Amigo"
+    ],
+    "file": "./cypress/fixtures/img1.jpg",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "techs": [
+      "Cypress",
+      "Selenium",
+      "Playwright",
+      "Robot Framework",
+      "k6"
+    ],
+    "terms": true
+  },
+  "company": {
+    "name": "Cristiano Mothe",
+    "email": "cristiano@teste.com.br",
+    "phone": "11 99999-9999",
+    "consultancyType": "In Company",
+    "personType": "cnpj",
+    "document": "47106657000100",
+    "discoveryChannels": [
+      "Instagram",
+      "LinkedIn"
+    ],
+    "file": "./cypress/fixtures/img1.jpg",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "techs": [
+      "Cypress"
+    ],
+    "terms": true
+  }
+}
