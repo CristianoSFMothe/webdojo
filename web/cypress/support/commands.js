@@ -17,3 +17,8 @@ Cypress.Commands.add("goTo", (buttonName, pageTile) => {
 
   cy.contains("h1", pageTile).should("be.visible");
 });
+
+Cypress.Commands.add("login", () => {
+  cy.startPage();
+  cy.submitLoginForm("papito@webdojo.com", "katana123");
+});

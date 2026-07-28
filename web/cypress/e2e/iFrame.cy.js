@@ -1,7 +1,6 @@
 describe("iFrame", () => {
   beforeEach(() => {
-    cy.startPage();
-    cy.submitLoginForm("papito@webdojo.com", "katana123");
+    cy.login();
   });
 
   it("Deve pode tocar o vídeo de exemplo", () => {

@@ -1,7 +1,6 @@
 describe("Kanban Board", () => {
   beforeEach(() => {
-    cy.startPage();
-    cy.submitLoginForm("papito@webdojo.com", "katana123");
+    cy.login();
   });
   it("Deve move uma tarefa de Todo para Done e atualizar o board", () => {
     cy.contains("Kanban").click();

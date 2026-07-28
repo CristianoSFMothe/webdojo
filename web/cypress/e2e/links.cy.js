@@ -1,7 +1,6 @@
 describe("Links abrindo nova guia/janela", () => {
   beforeEach(() => {
-    cy.startPage();
-    cy.submitLoginForm("papito@webdojo.com", "katana123");
+    cy.login();
   });
   it("Validando o atributo do link no Instagram", () => {
     cy.get('[data-cy="instagram-link"]')
@@ -9,7 +8,7 @@ describe("Links abrindo nova guia/janela", () => {
       .and("have.attr", "target", "_blank");
   });
 
-  it.only("Acessa link de termos de uso removendo o target blank", () => {
+  it("Acessa link de termos de uso removendo o target blank", () => {
     cy.startPage();
     cy.submitLoginForm("papito@webdojo.com", "katana123");
 
