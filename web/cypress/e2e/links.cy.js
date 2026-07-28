@@ -1,7 +1,9 @@
 describe("Links abrindo nova guia/janela", () => {
-  it("Validando o atributo do link no Instagram", () => {
+  beforeEach(() => {
     cy.startPage();
     cy.submitLoginForm("papito@webdojo.com", "katana123");
+  });
+  it("Validando o atributo do link no Instagram", () => {
     cy.get('[data-cy="instagram-link"]')
       .should("have.attr", "href", "https://www.instagram.com/qapapito")
       .and("have.attr", "target", "_blank");

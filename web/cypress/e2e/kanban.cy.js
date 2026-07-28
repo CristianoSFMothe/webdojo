@@ -1,8 +1,9 @@
 describe("Kanban Board", () => {
-  it("Deve move uma tarefa de Todo para Done e atualizar o board", () => {
+  beforeEach(() => {
     cy.startPage();
     cy.submitLoginForm("papito@webdojo.com", "katana123");
-
+  });
+  it("Deve move uma tarefa de Todo para Done e atualizar o board", () => {
     cy.contains("Kanban").click();
 
     const dataTransfer = new DataTransfer();

@@ -1,10 +1,12 @@
 describe("Formulário de Consultoria", () => {
-  it.only("Deve solicitar consultoria individual", () => {
+  beforeEach(() => {
     cy.startPage();
     cy.submitLoginForm("papito@webdojo.com", "katana123");
 
     cy.goTo("Formulários", "Consultoria");
+  });
 
+  it("Deve solicitar consultoria individual", () => {
     cy.get('input[placeholder="Digite seu nome completo').type(
       "Cristiano Mothe",
     );
@@ -54,7 +56,7 @@ describe("Formulário de Consultoria", () => {
     cy.get(
       'textarea[placeholder="Descreva mais detalhes sobre sua necessidade"]',
     ).type(
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library, took a 1914",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     );
 
     const techs = [
@@ -90,7 +92,7 @@ describe("Formulário de Consultoria", () => {
       );
   });
 
-  it.only("Deve verificar os campos obrigatórios", () => {
+  it("Deve verificar os campos obrigatórios", () => {
     cy.startPage();
     cy.submitLoginForm("papito@webdojo.com", "katana123");
 

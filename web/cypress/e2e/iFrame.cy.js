@@ -1,8 +1,10 @@
 describe("iFrame", () => {
-  it("Deve pode tocar o vídeo de exemplo", () => {
+  beforeEach(() => {
     cy.startPage();
     cy.submitLoginForm("papito@webdojo.com", "katana123");
+  });
 
+  it("Deve pode tocar o vídeo de exemplo", () => {
     cy.contains("Video").click();
 
     cy.get("iframe[title='Video Player']")
